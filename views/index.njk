@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Portfólio - Vinícius Alves</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="/" class="logo">
+            < / Portfólio>
+        </a>
+        <div class="toggle" onclick="toggleMenu();">
+            <ul class="menu">
+                <li><a href="/">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#service">Serviços</a></li>
+                <li><a href="/">Trabalhos</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="header">
+        <div class="progress-scroll-bar" id="progressBar"></div>
+    </div>
+
+    <div id="container">
+
+        <section class="banner" id="home">
+            <div class="home">
+                <div class="textBox">
+                    <h2>Olá, eu sou<br><span>Vinícius Alves</span></h2>
+                    <h3>E sou um desenvolvedor Front-End</h3>
+                    <div class="buttonMe">
+                        <a href="https://drive.google.com/u/0/uc?id=1McHkxikUUoGKzblWiimozNqxlhi7suWU&export=download"
+                            download class="btnAbout btn">Download CV</a>
+                        <a href="https://github.com/vinialv" target="_blank" class="btnAbout btn">
+                            <i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div class="imageHome">
+                    <img src="./image/logoHome.svg">
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="headingAbout">
+                <h2>Sobre mim</h2>
+            </div>
+            <div class="contentAbout">
+                <div class="contentBoxAbout">
+                    <div class="image">
+                        <img src="./image/imageHome" class="imgAbout">
+                    </div>
+                    <div class="text">
+                        <p><span>Eu sou um desenvolvedor Front-End.</br></span>
+                            Sou Recém formado em Análise e desenvolvimento de sistemas pela FATEC, venho me
+                            especializando
+                            em desenvolvimento Web, com foco no Front-End. <br><br>Eu iniciei a programação quando
+                            conheci o
+                            software Excel, onde eu desenvolvi alguns sistemas para que pudesse ser utilizado nas
+                            empresas onde atuei, com a faculdade tive a oportunidade de aprender Java Desktop, onde
+                            realizei algumas aplicações que no qual sempre me identifiquei mais ao lado do Front
+                            End.<br><br>
+                            Agora venho com foco total e dedicação aos estudos, sempre buscando as melhores
+                            tendências,
+                            para estar sempre em um nível competitivo no mercado de trabalho.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="service">
+
+            <div class="heading">
+                <h2>Serviços</h2>
+            </div>
+
+            <div class="fullWorks">
+            {%for item in items%}
+                <div class="flip-container">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="{{item.img}}">
+                            <h2>{{item.task}}</h2>
+                        </div>
+                        <div class="back">
+                            <div class="details">
+                                <h2>{{item.task}}</h2>
+                                <p>{{item.details}}</p>
+                                <button class="btn btn1">Mais detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {%endfor%}
+            </div>
+
+        </section>
+
+        <section class="work" id="work">
+            <div class="heading">
+                <h2>Últimos trabalhos</h2>
+            </div>
+            <div class="content">
+                <div class="workBox">
+                    <img src="./image/product1.jpg">
+                </div>
+                <div class="workBox">
+                    <img src="image/product2.jpg">
+                </div>
+                <div class="workBox">
+                    <img src="image/product3.jpg">
+                </div>
+                <div class="workBox">
+                    <img src="image/product4.jpg">
+                </div>
+            </div>
+            <div class="heading">
+                <a href="works.html" class="btnTrabalhos btn">Continue vendo</a>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="heading">
+                <h2>Entre em contato</h2>
+            </div>
+            <div class="content">
+                <div class="contactInfo">
+                    <h3>Informações de contato</h3>
+                    <div class="contactInfoBox">
+
+                        <div class="FullBox">
+                            <div class="box">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <h3>Endereço</h3>
+                            </div>
+                            <p>R. Prefeito João Batista Moreira de Souza,
+                                Jardim Aeropoto, 440, São José do Rio Pardo
+                                - SP, 13720-000.</p>
+                        </div>
+
+                        <div class="FullBox">
+                            <div class="box">
+                                <i class="fa fa-phone-alt"></i>
+                                <h3>Telefone</h3>
+                            </div>
+                            <p>+55 (19) 9 9376-6542</p>
+                        </div>
+
+                        <div class="FullBox">
+                            <div class="box">
+                                <i class="fa fa-envelope"></i>
+                                <h3>E-mail</h3>
+                            </div>
+                            <p>vini.alv15@hotmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="formBox">
+                    <form action="/email" method="POST" id="form">
+                        <h3>Envie uma mensagem</h3>
+                        <input type="text" name="formName" placeholder="Nome">
+                        <input type="email" name="formEmail" placeholder="E-mail">
+                        <textarea name="formMessage" placeholder="Escreva sua mensagem"></textarea>
+                        <button type="submit" class="buttonForm btn">ENVIAR</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div class="copyright">
+            <p>Copyright © 2020 Vinícius Alves. All right reserved.</p>
+        </div>
+
+    </div>
+    <script src="/email.js"></script>
+    <script src="/script.js"></script>
+    <script>
+
+        window.addEventListener('scroll', function () {
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
+</body>
+
+</html>
