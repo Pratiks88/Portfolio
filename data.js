@@ -10,10 +10,5 @@ module.exports = [
         task: "Software Development",
         details: "Development of desktop software for business management."
     },
-    {
-        img: "https://icons8.com/icon/hKw7Mn8TNTuz/sql",
-        task: "Machine Learning",
-        details: "Development of spreadsheets and charts for your work or your company."
-    },
   
 ]
