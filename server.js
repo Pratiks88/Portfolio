@@ -2,13 +2,13 @@ const express = require('express')
 const nunjucks = require('nunjucks')
 const jobs = require("./data")
 const bodyParser = require('body-parser')
+const nodemailer = require('nodemailer');
 
 const server = express()
 
 server.use(express.static('public'))
 server.set("view engine", "njk")
-server.use(bodyParser.urlencoded({extended: false}))
-server.use(bodyParser.json())
+
 
 nunjucks.configure("views", {
     express: server,
@@ -22,6 +22,7 @@ server.listen(5000, function(){
 
 /*CRIAÇÃO DAS ROTAS*/
 
+
 server.get("/", function(req, res){
     return res.render("index", { items: jobs })
 })
@@ -33,3 +34,6 @@ server.get("/index", function(req, res){
 server.post("/email", function(req, res){
     res.send("Nome: " + req.body.formName)
 })
+
+
+// Configure Nodemailer to send emails using your Gmail account

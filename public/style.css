@@ -40,6 +40,10 @@ header ul{
     position: relative;
     display: flex;
 }
+.jai
+{
+    margin-top: 40px;
+}
 
 header .logo{
     color: #111;
@@ -244,7 +248,7 @@ section.about{
     max-width: 350px;
     width: 80%;
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -288,22 +292,68 @@ section.about{
 
 /*Our services*/
 .services{
-    background: #111;
+    background: #fabfbf;
     text-align: center;
+    padding-bottom: 100px;
 }
 
 .services .heading h2 {
-    color: #fff;
+    color: #1d1a1a;
 }
 
-.fullWorks{
+/* Your existing CSS rules here */
+
+.fullWorks {
+    
     display: grid;
-    grid-template-columns: 350px 350px 350px;
-    grid-template-rows: 300px 300px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     justify-items: center;
     justify-content: center;
-    
+    margin: 0; /* Reset margin to zero */
+    padding: 0; /* Reset padding to zero */
 }
+
+.workCard {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    height: 100%;
+    margin: 0; /* Reset margin to zero */
+}
+
+@media (max-width: 850px) {
+    .fullWorks {
+        height:950px;
+        grid-template-columns: repeat(2, 1fr); /* Set 2 columns for screens below 850px */
+    }
+}
+
+
+.workCard img {
+    max-width: 100%; /* Prevent image enlargement */
+}
+
+.workCard h2 {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.jai {
+    margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+    .fullWorks {
+        grid-template-columns: repeat(3, 1fr); /* Set a fixed number of columns for screens below 800px */
+    }
+
+    .workCard {
+        height: auto; /* Allow height to be determined by content */
+    }
+}
+
 
 .flip-container {
     perspective: 1000px;
@@ -746,7 +796,7 @@ margin-bottom: 20px;
     }
 
     .fullWorks{
-        grid-template-columns: 350px 350px;   
+        grid-template-columns: 200px 200px;   
 }
 
 }
@@ -784,3 +834,54 @@ margin-bottom: 20px;
     }
 
 }
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #555;
+    border-radius: 5px;
+  }
+  
+  .contact-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
+  button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Portfólio - Vinícius Alves</title>
+    <title>Portfolio - Pratik Shanbhag</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -14,16 +14,15 @@
 <body>
     <header>
         <a href="/" class="logo">
-            < / Portfólio>
+            Portfolio
         </a>
         <div class="toggle" onclick="toggleMenu();">
             <ul class="menu">
-                <li><a href="/">Início</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#service">Serviços</a></li>
-                <li><a href="/">Trabalhos</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#contact">Contato</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Skills</a></li>
+               
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -37,162 +36,73 @@
         <section class="banner" id="home">
             <div class="home">
                 <div class="textBox">
-                    <h2>Olá, eu sou<br><span>Vinícius Alves</span></h2>
-                    <h3>E sou um desenvolvedor Front-End</h3>
+                    <h2>Hello, I'm<br><span>Pratik Shanbhag</span></h2>
+                    <h3>I'm a Full Stack Developer</h3>
                     <div class="buttonMe">
-                        <a href="https://drive.google.com/u/0/uc?id=1McHkxikUUoGKzblWiimozNqxlhi7suWU&export=download"
+                         <a href="https://www.linkedin.com/in/pratik-shanbhag-73bb03246/" target="_blank" class="btnAbout btn">
+                            <i class="fab fa-linkedin"></i> Linked-in</a>
+                        <a href="https://drive.google.com/file/d/1Qydkei8YopX_tC192XpaFATn72FbTUWW/view?usp=drive_link"
                             download class="btnAbout btn">Download CV</a>
-                        <a href="https://github.com/vinialv" target="_blank" class="btnAbout btn">
+                        <a href="https://github.com/Pratiks88" target="_blank" class="btnAbout btn">
                             <i class="fab fa-github"></i> GitHub</a>
+                       
                     </div>
                 </div>
                 <div class="imageHome">
-                    <img src="./image/logoHome.svg">
+                    <img src="./logoHome.png">
                 </div>
             </div>
         </section>
 
         <section class="about" id="about">
             <div class="headingAbout">
-                <h2>Sobre mim</h2>
+                <h2>About Me</h2>
             </div>
             <div class="contentAbout">
                 <div class="contentBoxAbout">
                     <div class="image">
-                        <img src="./image/imageHome" class="imgAbout">
+                        <img src="./pratik.jpg" class="imgAbout">
                     </div>
                     <div class="text">
-                        <p><span>Eu sou um desenvolvedor Front-End.</br></span>
-                            Sou Recém formado em Análise e desenvolvimento de sistemas pela FATEC, venho me
-                            especializando
-                            em desenvolvimento Web, com foco no Front-End. <br><br>Eu iniciei a programação quando
-                            conheci o
-                            software Excel, onde eu desenvolvi alguns sistemas para que pudesse ser utilizado nas
-                            empresas onde atuei, com a faculdade tive a oportunidade de aprender Java Desktop, onde
-                            realizei algumas aplicações que no qual sempre me identifiquei mais ao lado do Front
-                            End.<br><br>
-                            Agora venho com foco total e dedicação aos estudos, sempre buscando as melhores
-                            tendências,
-                            para estar sempre em um nível competitivo no mercado de trabalho.
+                        <p ><span>I am a Full stack developer.</br></span><br>
+                           I'm Pratik Prakash Shanbhag, currently in my third year of studying Information Science and Engineering at BMS College of Engineering in Bangalore. My interests lie in crafting responsive and visually appealing websites, delving into the world of machine learning, and much more. I'm passionate about creating cutting-edge web experiences and staying at the forefront of technology trends. Whether it's designing websites or exploring machine learning, I'm dedicated to honing my skills and knowledge to excel in the ever-evolving tech industry
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="services" id="service">
-
-            <div class="heading">
-                <h2>Serviços</h2>
-            </div>
-
-            <div class="fullWorks">
-            {%for item in items%}
-                <div class="flip-container">
-                    <div class="flipper">
-                        <div class="front">
-                            <img src="{{item.img}}">
-                            <h2>{{item.task}}</h2>
-                        </div>
-                        <div class="back">
-                            <div class="details">
-                                <h2>{{item.task}}</h2>
-                                <p>{{item.details}}</p>
-                                <button class="btn btn1">Mais detalhes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {%endfor%}
-            </div>
-
-        </section>
-
-        <section class="work" id="work">
-            <div class="heading">
-                <h2>Últimos trabalhos</h2>
-            </div>
-            <div class="content">
-                <div class="workBox">
-                    <img src="./image/product1.jpg">
-                </div>
-                <div class="workBox">
-                    <img src="image/product2.jpg">
-                </div>
-                <div class="workBox">
-                    <img src="image/product3.jpg">
-                </div>
-                <div class="workBox">
-                    <img src="image/product4.jpg">
-                </div>
-            </div>
-            <div class="heading">
-                <a href="works.html" class="btnTrabalhos btn">Continue vendo</a>
-            </div>
-        </section>
-
-        <section class="contact" id="contact">
-            <div class="heading">
-                <h2>Entre em contato</h2>
-            </div>
-            <div class="content">
-                <div class="contactInfo">
-                    <h3>Informações de contato</h3>
-                    <div class="contactInfoBox">
-
-                        <div class="FullBox">
-                            <div class="box">
-                                <i class="fa fa-map-marker-alt"></i>
-                                <h3>Endereço</h3>
-                            </div>
-                            <p>R. Prefeito João Batista Moreira de Souza,
-                                Jardim Aeropoto, 440, São José do Rio Pardo
-                                - SP, 13720-000.</p>
-                        </div>
-
-                        <div class="FullBox">
-                            <div class="box">
-                                <i class="fa fa-phone-alt"></i>
-                                <h3>Telefone</h3>
-                            </div>
-                            <p>+55 (19) 9 9376-6542</p>
-                        </div>
-
-                        <div class="FullBox">
-                            <div class="box">
-                                <i class="fa fa-envelope"></i>
-                                <h3>E-mail</h3>
-                            </div>
-                            <p>vini.alv15@hotmail.com</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="formBox">
-                    <form action="/email" method="POST" id="form">
-                        <h3>Envie uma mensagem</h3>
-                        <input type="text" name="formName" placeholder="Nome">
-                        <input type="email" name="formEmail" placeholder="E-mail">
-                        <textarea name="formMessage" placeholder="Escreva sua mensagem"></textarea>
-                        <button type="submit" class="buttonForm btn">ENVIAR</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <div class="copyright">
-            <p>Copyright © 2020 Vinícius Alves. All right reserved.</p>
-        </div>
-
+ <section class="services" id="service">
+    <div class="heading">
+        <h2 >Skills</h2>
     </div>
-    <script src="/email.js"></script>
-    <script src="/script.js"></script>
-    <script>
 
-        window.addEventListener('scroll', function () {
-            var header = document.querySelector('header');
-            header.classList.toggle('sticky', window.scrollY > 0);
-        });
-    </script>
+    <div class="fullWorks">
+        {% for item in items %}
+        <div class="workCard">
+            <img src="{{ item.img }}">
+            <h2>{{ item.task }}</h2>
+            <div class="details">
+              
+                <p class="jai">{{ item.details }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section> 
+
+
+<footer>
+  <div class="contact-form">
+    <h3 class="handle">Contact Us</h3>
+    <p>Have questions or feedback? Reach out to me at:</p>
+    <ul>
+      <li>Email: prathikshanbhag08@gmail.com.com</li>
+      <li>Phone: +91 7996457543</li>
+    </ul>
+  </div>
+</footer>
+
+
 </body>
-
 </html>
